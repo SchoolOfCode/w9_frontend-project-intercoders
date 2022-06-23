@@ -1,3 +1,7 @@
+.body{
+--text-color: white; 
+--text-decoration:none;
+}
 .Container-card{
     display: flex;
     margin: 15px;
@@ -7,6 +11,17 @@
     background-color:#3A3A3C;
     height: 130px ;
     border-radius: 8px;
+}
+.cross-button{
+    background-color: #3A3A3C;
+    --text-color:#ffab01;
+    color: antiquewhite;
+    border-color: grey;
+    border-radius: 15px;
+    
+}
+.cross-function{
+    --text-decoration: line-through;
 }
 
 

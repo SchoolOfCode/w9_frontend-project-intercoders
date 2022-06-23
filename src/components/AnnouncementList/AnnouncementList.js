@@ -21,6 +21,12 @@ volunteerName:"Andy",
 date:"27/06/2022",
 time:"17:30"}]
 
+function handleCross(){
+  let newButton = document.body;
+  newButton.classList.toggle("cross-function")
+
+}
+
 
 // function getVolunteer() {
 //   console.log("Inside Axios");
@@ -35,11 +41,12 @@ return(
             <div className="Container-card">
             { keycourse.map(function (item){
              return(
-             <div key={item.id} className="Announcement-card">
+             <div key={item.id} className="Announcement-card cross-function">
                <h3>{item.keycourse}</h3>
                 <p>Room: {item.id}</p>
                 <h3>{item.volunteerName}</h3>
                 <p>{`${item.date} ${item.time}`}</p>
+                <button className="cross-button"onClick={handleCross}>Cancel Class</button>
                 
                 </div>)})}   
              </div>
