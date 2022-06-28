@@ -21,8 +21,6 @@ function Volunteer(props,{setkeycourses}) {
 
   async function handleClick(e) {
     alert("Form sent, Thanks for your help");
-    //setVolunteer([...volunteer,{volunteername:nameVolunteer.toLowerCase(), id:volunteer.length+1,date:date1,keyCourse:props.value}])}
-    // console.log(volunteer)
     e.preventDefault();
     setVolunteer([
       ...volunteer,
@@ -33,7 +31,7 @@ function Volunteer(props,{setkeycourses}) {
         keyCourse: props.value,
       },
     ]);
-    // setkeycourses(volunteer);
+    
     Axios.post("https://intercoders.herokuapp.com/announcement", {
       id: volunteer.length + 1,
       keycourse: props.value,
@@ -70,4 +68,4 @@ function Volunteer(props,{setkeycourses}) {
 
 export default Volunteer;
 
-//export {volunteerData}
+

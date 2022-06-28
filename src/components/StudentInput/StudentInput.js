@@ -71,16 +71,14 @@ function deleteStudent(deletedId){
     setStudent(newArrayStudent);
     //console.log(students.name)
     let authorizationToken = "5255e995-a4de-4c4f-b063-c40a351f1f25";
-    console.log(props.value)
-    console.log("passing here")
+    //console.log(props.value)
+    //console.log("passing here")
     Axios.delete("https://intercoders.herokuapp.com/waitinglist", { 
       headers: {
       Authorization: authorizationToken
     }
     ,data :{
-      //studentname: students[students.length - 1].name,
       studentname: deletedStudent[0].studentname,
-      //keycourse: students[students.length - 1].keyCourse
       keycourse: props.value,}
     }).then((response) => {
       console.log("response from delete request", response);

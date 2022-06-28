@@ -5,7 +5,10 @@ import { useState } from "react";
 //import {volunteerData} from "../Volunteer/Volunter"
 
 function AnnouncementList() {
+//state for new courses
 const [keycourses, setkeycourses] = useState([])
+
+//fetch from database the volunteers
 async function getVolunteers() {
   let response = await fetch ("https://intercoders.herokuapp.com/announcement");
   let data = await response.json();
@@ -16,7 +19,8 @@ useEffect(()=> {
   getVolunteers();
 },[])
 
-/*function handleCross(){
+
+function handleCross(){
 function deleteCourse(deletedId){
   console.log("delete course function running")
     let newArrayCourses = students.filter(function(thisStudent){
@@ -56,35 +60,11 @@ function deleteCourse(deletedId){
   }}
 
 
-*/
 
 
 
-
-
-// let keycourses = [{
-// id:"1",
-// keycourses:"JavaScript",
-// volunteerName:"Bryce",
-// date:"22/06/2022",
-// time:"17:30"
-// },
-// {
-// id:"2",
-// keycourses:"SQL",
-// volunteerName:"Andy",
-// date:"27/06/2022",
-// time:"17:30"}]
-
-
-// function getVolunteer() {
-//   console.log("Inside Axios");
-//   Axios.get("http://localhost:3001/announcement").then((response) => {
-//     setkeycoursess(response.data.payload);
-//   });
-// }
 //console.log("this is the props", volunteerData)
-//<button className="cross-button" onClick={handleCross(item.index)}>Cancel Class</button>;
+
 
 
 return(
@@ -96,7 +76,7 @@ return(
                 <p>Room: {item.index}</p>
                 <h3>{item.volunteername}</h3>
                 <p>{`${item.date} ${item.time}`}</p>
-                
+                <button className="cross-button" onClick={handleCross(item.index)}>Cancel Class</button>
                 </div>)})}   
              </div>
 );

@@ -4,7 +4,7 @@ import AnnouncementList from "../AnnouncementList/AnnouncementList";
 import Categories from "../Categories/Categories";
 
 function Announcement(props,{topic}) {
-    console.log("props de announcemnt", props)
+    //console.log("props de announcemnt", props)
     return(
         <div className="Main--container">
            <h2>
