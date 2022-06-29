@@ -87,6 +87,7 @@ function StudentInput(props) {
   return (
     <div className="input-student">
       <input
+        className="student--input"
         onChange={handleChange}
         type="text"
         placeholder="Student's name"
