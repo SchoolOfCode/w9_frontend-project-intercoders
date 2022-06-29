@@ -4,6 +4,7 @@ import Axios from "axios";
 
 //Declaring the useStates
 function StudentInput(props) {
+  console.log('this is the props of students input',props.key)
   const [more, setMore] = useState("More");
   const [text, setText] = useState("");
   const [students, setStudent] = useState([]);
@@ -91,6 +92,7 @@ function StudentInput(props) {
         onChange={handleChange}
         type="text"
         placeholder="Student's name"
+        key={props.key}
       ></input>
       <button className="addstudent" type="submit" onClick={handleClick}>
         +

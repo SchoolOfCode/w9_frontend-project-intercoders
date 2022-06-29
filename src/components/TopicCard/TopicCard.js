@@ -31,7 +31,7 @@ function TopicCard({ setkeycourses }) {
               <h3>{item.topicName}</h3>
             </div>
             <div className="inputs">
-              <StudentInput value={item.topicName.toLowerCase()} />
+              <StudentInput key={index+1} value={item.topicName.toLowerCase()} />
               <Volunteer
                 setkeycourses={setkeycourses}
                 value={item.topicName.toLowerCase()}
