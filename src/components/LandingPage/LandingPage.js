@@ -35,7 +35,7 @@ function LandingPage() {
       } else {
         console.log("User is not found");
         setLoginStatus("User is not found");
-      }
+      }}
 
       return( <div>
       <Register />
@@ -44,6 +44,6 @@ function LandingPage() {
         <h1>{loginStatus}</h1>
         </div>
         )
-}
+};
 
-export default LandingPage
+export default LandingPage;
